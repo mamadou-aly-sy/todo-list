@@ -8,11 +8,12 @@
 </head>
 
 <body>
-    <ul>
-        @foreach($todos as $todo)
-        <li><a href="/todo/{{$todo->id}}">{{$todo->name}}</a></li>
-        @endforeach
-    </ul>
+    <h1>{{$todos->name}}</h1>
+    <p>{{$todos->description}}</p>
+    <small>
+        {{$todos->created_at}}
+    </small>
+    <a href="/delete/{{$todos->id}}">delete</a>
 </body>
 
 </html>

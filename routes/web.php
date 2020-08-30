@@ -1,5 +1,6 @@
 <?php
 
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@haj');
-Route::get('/haj', 'HomeController@haj');
-Route::get('/sy', 'HomeController@sy');
+Route::get('/', 'HomeController@index');
+Route::get('/users', 'HomeController@users');
+Route::get('/todo/{id}', 'HomeController@todo');
+Route::get('/delete/{id}', 'HomeController@delete');
+Route::get('/add', 'HomeController@add');
+Route::post('/insert', function (Request $Request) {
+    dd($Request);
+});
