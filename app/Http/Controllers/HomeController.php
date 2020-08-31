@@ -33,8 +33,7 @@ class HomeController extends Controller
     {
         $todo = new Todo();
         $todo->where("id", $id)->delete();
-        $todos = $todo->all();
-        return view('index', compact("todos"));
+        return redirect('/', 301);
     }
 
     /**
