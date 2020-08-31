@@ -3,10 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class Categorie extends Model
 {
-    protected $fillable = ['name'];
+    use Notifiable;
 
-    protected $hidden = ['id'];
+    protected $fillable = ['name'];
 }
